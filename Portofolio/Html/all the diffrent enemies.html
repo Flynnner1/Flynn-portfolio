@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Enemy Variations | Arcana Rift</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                background: #101313;
+                color: #f1f7ed;
+                margin: 0;
+                padding: 0;
+                line-height: 1.7;
+            }
+            .container {
+                max-width: 900px;
+                margin: 3rem auto;
+                background: #161a17;
+                border-radius: 12px;
+                box-shadow: 0 2px 18px #62ff7e12;
+                padding: 2.5rem;
+                border: 1px solid #2e4d34;
+                position: relative;
+                /* For proper sticky positioning */
+            }
+            h1 {
+                color: #62ff7e;
+                font-size: 2.2rem;
+                margin-bottom: 1.2rem;
+            }
+            .enemy-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+            .enemy-card {
+                background: #222b21;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px #62ff7e22;
+                border: 1px solid #62ff7e44;
+                padding: 1.2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .enemy-img {
+                width: 80px;
+                height: 80px;
+                object-fit: contain;
+                background: #181d19;
+                border: 2px solid #a6ff4d;
+                border-radius: 8px;
+                margin-bottom: 1rem;
+            }
+            .enemy-title {
+                color: #a6ff4d;
+                font-size: 1.15rem;
+                margin-bottom: .5rem;
+            }
+            .enemy-desc {
+                font-size: .99rem;
+                color: #b3f7b3;
+                text-align: center;
+            }
+            .self-drawn-note {
+                margin-top: 3rem;
+                padding: 1.1rem 1.3rem;
+                background: #181d19;
+                color: #b3f7b3;
+                border-left: 4px solid #62ff7e;
+                border-radius: 8px;
+                font-size: 1.12rem;
+                box-shadow: 0 2px 10px #62ff7e15;
+                font-style: italic;
+                text-align: center;
+            }
+            .back-link {
+                position: sticky;
+                bottom: 18px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                color: #b3f7b3;
+                background: #222b21;
+                border: 1px solid #2e4d34;
+                border-radius: 8px;
+                padding: 0.5rem 1.2rem;
+                text-decoration: none;
+                font-weight: 500;
+                transition: background 0.2s, color 0.2s;
+                display: block;
+                width: max-content;
+                margin: 2rem auto 0 auto;
+            }
+            .back-link:hover {
+                background: #62ff7e;
+                color: #101313;
+            }
+            @media (max-width: 600px) {
+                .container {
+                    padding: 1rem;
+                }
+                .enemy-list {
+                    grid-template-columns: 1fr;
+                    gap: 1.2rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Enemy Variations</h1>
+            <p>Arcana Rift features a diverse cast of enemies. Each enemy has its own look, abilities, and behavior, offering unique challenges to the player. Here are 25 of the enemies you'll encounter in the game:</p>
+            <div class="enemy-list">
+                <div class="enemy-card">
+                    <img src="slime.png" alt="Slime" class="enemy-img">
+                    <div class="enemy-title">Slime</div>
+                    <div class="enemy-desc">A classic weak enemy that moves slowly and attacks by bumping into the player. Great for beginners to practice combat. It has a 91.27% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="rockslime.png" alt="Stone Slime" class="enemy-img">
+                    <div class="enemy-title">Stone Slime</div>
+                    <div class="enemy-desc">A sturdier version of the standard slime, with increased health. It has a 5.45% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="kirbyslime.png" alt="Kirby Slime" class="enemy-img">
+                    <div class="enemy-title">Kirby Slime</div>
+                    <div class="enemy-desc">A rare, fast-moving slime with a unique appearance. It has a 2% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="water slime.png" alt="Water Slime" class="enemy-img">
+                    <div class="enemy-title">Water Slime</div>
+                    <div class="enemy-desc">A blue slime that glides around the battlefield. It has a 1.09% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="goldslime.png" alt="Gold Slime" class="enemy-img">
+                    <div class="enemy-title">Gold Slime</div>
+                    <div class="enemy-desc">A super rare slime that is hard to catch. Defeating it rewards extra coins. It has a 0.18% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="zombie.png" alt="Zombie" class="enemy-img">
+                    <div class="enemy-title">Zombie</div>
+                    <div class="enemy-desc">A slow-moving undead enemy. Deals damage if it gets close and it has a 91.27% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="enraged zombie.png" alt="Raged Zombie" class="enemy-img">
+                    <div class="enemy-title">Raged Zombie</div>
+                    <div class="enemy-desc">A zombie driven mad. Moves much faster and attacks more aggressively than a normal zombie. And it has a 5.45% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="drownd zombie.png" alt="Drowned Zombie" class="enemy-img">
+                    <div class="enemy-title">Drowned Zombie</div>
+                    <div class="enemy-desc">A waterlogged zombie that has a 2% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="ash zombie.png" alt="Ash Zombie" class="enemy-img">
+                    <div class="enemy-title">Ash Zombie</div>
+                    <div class="enemy-desc">A zombie that is completely burned and turned into ash, making it super fast and it has a 1.09% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="sand zombie.png" alt="Sand Zombie" class="enemy-img">
+                    <div class="enemy-title">Sand Zombie</div>
+                    <div class="enemy-desc">The Sand zombie is the most rare one of all the zombies by having a 0.18% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="skeleton.png" alt="Skeleton" class="enemy-img">
+                    <div class="enemy-title">Skeleton</div>
+                    <div class="enemy-desc">A classic bony foe that shoots arrows from a distance. Medium health and quick movement. It has a 91.27% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="Armored Skeleton1.png" alt="Armored Skeleton" class="enemy-img">
+                    <div class="enemy-title">Armored Skeleton</div>
+                    <div class="enemy-desc">A skeleton with iron armor, giving more health to a skeleton. It has a 5.45% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="ice skeleton.png" alt="Ice Skeleton" class="enemy-img">
+                    <div class="enemy-title">Ice Skeleton</div>
+                    <div class="enemy-desc">A skeleton imbued with ice powers. It deals more damage than a normal skeleton. It has a 2% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="golden skeleton.png" alt="Gold Skeleton" class="enemy-img">
+                    <div class="enemy-title">Gold Skeleton</div>
+                    <div class="enemy-desc">A rare skeleton that drops bonus gold. It has a 1.09% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="super armour skeleton.png" alt="Skeleton General" class="enemy-img">
+                    <div class="enemy-title">Skeleton General</div>
+                    <div class="enemy-desc">Leads other skeletons in battle, having much more hp and damage than the rest. It has a 0.18% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="demon.png" alt="Demon" class="enemy-img">
+                    <div class="enemy-title">Demon</div>
+                    <div class="enemy-desc">A demonic enemy that runs towards you with his trident. Fast and aggressive. It has a 91.27% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="giant demon.png" alt="Giant Demon" class="enemy-img">
+                    <div class="enemy-title">Giant Demon</div>
+                    <div class="enemy-desc">A massive demon that deals a lot of damage but is a lot slower. High health and strength. It has a 5.45% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="demon mage.png" alt="Demon Mage" class="enemy-img">
+                    <div class="enemy-title">Demon Mage</div>
+                    <div class="enemy-desc">A caster demon that launches various dangerous spells from afar. It has a 2% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="demon necro.png" alt="Demon Necromancer" class="enemy-img">
+                    <div class="enemy-title">Demon Necromancer</div>
+                    <div class="enemy-desc">Summons zombies to fight alongside it. It has a 1.09% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="demon king.png" alt="Demon King" class="enemy-img">
+                    <div class="enemy-title">Demon King</div>
+                    <div class="enemy-desc">The ruler of all demons, buffs other demons. It has a 0.18% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="white cow.png" alt="White Cow" class="enemy-img">
+                    <div class="enemy-title">White Cow</div>
+                    <div class="enemy-desc">A rare, peaceful cow. Very friendly—some say there's a secret if you find one. It has a 91.27% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="brown cow.png" alt="Brown Cow" class="enemy-img">
+                    <div class="enemy-title">Brown Cow</div>
+                    <div class="enemy-desc">A calm cow with a brown coat. Sometimes found in herds. It has a 5.45% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="angry cow.png" alt="Angry Cow" class="enemy-img">
+                    <div class="enemy-title">Angry Cow</div>
+                    <div class="enemy-desc">This cow charges at the player when he gets close. Watch out for its horns! It has a 2% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="pink cow.png" alt="Pink Cow" class="enemy-img">
+                    <div class="enemy-title">Pink Cow</div>
+                    <div class="enemy-desc">A cow with a unique pink color. Very rare and friendly. It has a 1.09% chance to spawn.</div>
+                </div>
+                <div class="enemy-card">
+                    <img src="gold cow.png" alt="Gold Cow" class="enemy-img">
+                    <div class="enemy-title">Gold Cow</div>
+                    <div class="enemy-desc">A legendary golden cow. Defeating it grants a lot of coins. It has a 0.18% chance to spawn.</div>
+                </div>
+            </div>
+            <div class="self-drawn-note">
+                <b>All of these enemy sprites were drawn by myself using pixelart!</b>
+            </div>
+            <a href="ambitie-p3.html" class="back-link">&larr; Back to Arcana Rift</a>
+        </div>
+    </body>
+</html>

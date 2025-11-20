@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Inventory Feature | Arcana Rift</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                background: #101313;
+                color: #f1f7ed;
+                margin: 0;
+                padding: 0;
+                line-height: 1.7;
+            }
+            .container {
+                max-width: 700px;
+                margin: 3rem auto;
+                background: #161a17;
+                border-radius: 12px;
+                box-shadow: 0 2px 18px #62ff7e12;
+                padding: 2.5rem;
+                border: 1px solid #2e4d34;
+                text-align: center;
+                position: relative; /* Needed for sticky back-link */
+            }
+            h1 {
+                color: #62ff7e;
+                font-size: 2.2rem;
+                margin-bottom: 1.2rem;
+            }
+            .big-gif {
+                width: 100%;
+                max-width: 450px;
+                border-radius: 12px;
+                border: 2px solid #62ff7e66;
+                box-shadow: 0 2px 18px #62ff7e22;
+                margin: 2rem auto 1.5rem auto;
+                display: block;
+            }
+            .explanation {
+                font-size: 1.15rem;
+                color: #b3f7b3;
+                margin-top: 1.7rem;
+                background: #222b21;
+                padding: 1.5rem 1.3rem;
+                border-radius: 10px;
+                border: 1px solid #2e4d34;
+                text-align: left;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .back-link {
+                position: sticky;
+                bottom: 18px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                color: #b3f7b3;
+                background: #222b21;
+                border: 1px solid #2e4d34;
+                border-radius: 8px;
+                padding: 0.5rem 1.2rem;
+                text-decoration: none;
+                font-weight: 500;
+                transition: background 0.2s, color 0.2s;
+                display: block;
+                width: max-content;
+                margin: 2.5rem auto 0 auto;
+            }
+            .back-link:hover {
+                background: #62ff7e;
+                color: #101313;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Inventory System</h1>
+            <!-- Replace the src below with your actual inventory GIF file path or link -->
+            <img src="../all the photo's and video's/working inventory.gif" alt="Inventory System Demo" class="big-gif"/>
+            <div class="explanation">
+                <strong>How the Inventory Works:</strong><br><br>
+                The inventory system in Arcana Rift is designed to be intuitive and efficient for players:
+                <ul>
+                    <li><b>Open/Close Inventory:</b> Press <b>I</b> to open or close your inventory at any time during the game.</li>
+                    <li><b>Add Items:</b> When you collect loot or rewards, they automatically appear in the next available slot in your inventory grid.</li>
+                    <li><b>Move Items:</b> Drag and drop items between slots to organize your inventory as you wish.</li>
+                    <li><b>Item Stacking:</b> Identical items (such as potions) stack together, saving space.</li>
+                    <li><b>Use Items:</b> Right-click or select an item to use or equip it, depending on its type.</li>
+                    <li><b>Hotbar Integration:</b> Drag items to your hotbar for quick access during gameplay. The hotbar is mapped to number keys for instant use.</li>
+                    <li><b>Item Tooltips:</b> Hover over any item to see its name, description, and effects.</li>
+                    <li><b>Remove Items:</b> Drag items outside the inventory window (to a trash icon) to discard them.</li>
+                </ul>
+                This system was built in Unity using C# and supports easy future expansion for new item types and features!
+            </div>
+
+            <a href="ambitie-p3.html" class="back-link">&larr; Back to Arcana Rift</a>
+        </div>
+    </body>
+</html>
