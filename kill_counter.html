@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kill Counter Feature | Arcana Rift</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                background: #101313;
+                color: #f1f7ed;
+                margin: 0;
+                padding: 0;
+                line-height: 1.7;
+            }
+            .container {
+                max-width: 700px;
+                margin: 3rem auto;
+                background: #161a17;
+                border-radius: 12px;
+                box-shadow: 0 2px 18px #62ff7e12;
+                padding: 2.5rem;
+                border: 1px solid #2e4d34;
+                position: relative; /* For sticky back-link */
+            }
+            h1 {
+                color: #62ff7e;
+                font-size: 2.2rem;
+                margin-bottom: 1.2rem;
+            }
+            .section-title {
+                color: #a6ff4d;
+                font-size: 1.25rem;
+                margin-top: 2rem;
+                margin-bottom: .7rem;
+                padding-bottom: .2rem;
+                border-bottom: 2px solid #333d2c;
+                display: inline-block;
+            }
+            .kill-gif {
+                display: block;
+                margin: 2rem auto 2rem auto;
+                width: 100%;
+                max-width: 420px;
+                min-height: 120px;
+                border-radius: 14px;
+                border: 2px solid #62ff7e;
+                background: #222;
+                box-shadow: 0 2px 12px #62ff7e22;
+            }
+            .code-screenshot {
+                display: block;
+                margin: 2rem auto 2rem auto;
+                width: 100%;
+                max-width: 520px;
+                border-radius: 12px;
+                border: 2px solid #a6ff4d;
+                background: #181d19;
+                box-shadow: 0 2px 10px #62ff7e22;
+            }
+            ul {
+                margin-left: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            li {
+                margin-bottom: 0.7rem;
+            }
+            .description {
+                color: #b3f7b3;
+                background: #222b21;
+                border-radius: 8px;
+                padding: 1.2rem 1rem;
+                margin-bottom: 2rem;
+                border: 1px solid #2e4d34;
+                font-size: 1.08rem;
+            }
+            .code-section {
+                background: #181d19;
+                border: 1px solid #62ff7e55;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px #62ff7e15;
+                margin: 2rem 0;
+                padding: 1.2rem 1rem;
+                color: #c2ffbc;
+                font-family: 'Fira Mono', 'Consolas', monospace;
+                font-size: 1rem;
+                overflow-x: auto;
+            }
+            .code-title {
+                color: #a6ff4d;
+                font-size: 1.08rem;
+                margin-bottom: 0.5rem;
+            }
+            .code-explanation {
+                color: #b3f7b3;
+                margin-bottom: 1rem;
+                font-size: 1rem;
+            }
+            .back-link {
+                position: sticky;
+                bottom: 18px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                color: #b3f7b3;
+                background: #222b21;
+                border: 1px solid #2e4d34;
+                border-radius: 8px;
+                padding: 0.5rem 1.2rem;
+                text-decoration: none;
+                font-weight: 500;
+                transition: background 0.2s, color 0.2s;
+                display: block;
+                width: max-content;
+                margin: 2rem auto 0 auto;
+            }
+            .back-link:hover {
+                background: #62ff7e;
+                color: #101313;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Kill Counter Feature</h1>
+
+            <div class="section-title">In-Game Showcase</div>
+            <!-- Replace 'KillCounter.png' with your actual gif or image file path -->
+            <img src="KillCounter.png" alt="Kill Counter In Game Demo" class="kill-gif">
+
+            <div class="section-title">How the Kill Counter Works</div>
+            <div class="description">
+                The kill counter in Arcana Rift keeps track of how many enemies you have defeated during your adventure.<br><br>
+                <ul>
+                    <li>The counter updates in real-time as you defeat slimes, skeletons, zombies, and other enemies.</li>
+                    <li>When you press K you instantly see your progress of how many you've killed of a certain enemies.</li>
+                    <li>The kill counter can be used for personal high scores or to showcase how many rare versions of enemies you've killed.</li>
+                </ul>
+            </div>
+
+            <div class="section-title">How the Code Works</div>
+            <div class="code-section">
+                <div class="code-title">Example: Saving and Loading the Kill Counter (Unity C#)</div>
+                <div class="code-explanation">
+                    This snippet demonstrates how the kill counter can be saved and loaded using Unity's <code>PlayerPrefs</code> system.
+                    Replace it with your real code or expand as needed for your project!
+                </div>
+                <pre><code>// When you kill an enemy
+killCount++;
+PlayerPrefs.SetInt("KillCount", killCount);
+PlayerPrefs.Save();
+
+// To load the kill count when the game starts
+void Start() {
+    LoadCounts();
+}
+</code></pre>
+            </div>
+
+            <div class="section-title">Code Screenshot</div>
+            <!-- Replace 'kill-counter-code.png' with your actual screenshot file path -->
+            <img src="saving kill counter.png" alt="Kill Counter Code Screenshot for saving the kill's" class="code-screenshot">
+            <img src="loading kill counter.png" alt="Kill Counter Code Screenshot loading the kill's" class="code-screenshot">
+            <a href="ambitie-p3.html" class="back-link">&larr; Back to Arcana Rift</a>
+        </div>
+    </body>
+</html>

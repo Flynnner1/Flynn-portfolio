@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HP System | Arcana Rift</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                background: #101313;
+                color: #f1f7ed;
+                margin: 0;
+                padding: 0;
+                line-height: 1.7;
+            }
+            .container {
+                max-width: 700px;
+                margin: 3rem auto;
+                background: #161a17;
+                border-radius: 12px;
+                box-shadow: 0 2px 18px #62ff7e12;
+                padding: 2.5rem;
+                border: 1px solid #2e4d34;
+                position: relative;
+            }
+            h1 {
+                color: #62ff7e;
+                font-size: 2.2rem;
+                margin-bottom: 1.2rem;
+                text-align: center;
+            }
+            .hp-gif {
+                width: 100%;
+                max-width: 450px;
+                border-radius: 12px;
+                border: 2px solid #62ff7e66;
+                box-shadow: 0 2px 18px #62ff7e22;
+                margin: 2rem auto 1.5rem auto;
+                display: block;
+                background: #222;
+            }
+            .section-title {
+                color: #a6ff4d;
+                font-size: 1.25rem;
+                margin-top: 2rem;
+                margin-bottom: .7rem;
+                padding-bottom: .2rem;
+                border-bottom: 2px solid #333d2c;
+                display: inline-block;
+            }
+            .description-card {
+                font-size: 1.1rem;
+                color: #b3f7b3;
+                margin-top: 1rem;
+                background: #222b21;
+                padding: 1.5rem 1.3rem;
+                border-radius: 10px;
+                border: 1px solid #2e4d34;
+                text-align: left;
+            }
+            ul {
+                padding-left: 1.5rem;
+            }
+            li {
+                margin-bottom: 0.7rem;
+            }
+            .back-link {
+                position: sticky;
+                bottom: 18px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                color: #b3f7b3;
+                background: #222b21;
+                border: 1px solid #2e4d34;
+                border-radius: 8px;
+                padding: 0.5rem 1.2rem;
+                text-decoration: none;
+                font-weight: 500;
+                transition: background 0.2s, color 0.2s;
+                display: block;
+                width: max-content;
+                margin: 2.5rem auto 0 auto;
+            }
+            .back-link:hover {
+                background: #62ff7e;
+                color: #101313;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Health (HP) System</h1>
+
+            <!-- Replace with a GIF of your HP bar taking damage and healing -->
+            <img src="the hp system.gif" alt="HP System Showcase" class="hp-gif">
+
+            <div class="section-title">How the HP System Works</div>
+            <div class="description-card">
+                The HP system is the core of player survival in Arcana Rift. It's designed to be clear, responsive, and rewarding.
+                <ul>
+                    <li><b>Health Bar:</b> Your current health is always visible on the HUD via a classic red health bar, so you can assess your status at a glance.</li>
+                    <li><b>Taking Damage:</b> When an enemy hits you, your HP decreases.</li>
+                    <li><b>Healing:</b> You can restore health by buying it in one of the shops.</li>
+                    <li><b>Defeat:</b> If your HP drops to zero, you are defeated. You will respawn at the last checkpoint, but you lose some XP and coins as a penalty.</li>
+                </ul>
+            </div>
+
+            <div class="section-title">Growing Stronger</div>
+            <div class="description-card">
+                As part of the leveling system, you can buy Extra <b>Maximum HP</b> which costs <b>1</b> level. This allows you to withstand more damage and take on more powerful enemies as you progress through the game.
+            </div>
+
+            <a href="ambitie-p3.html" class="back-link">&larr; Back to Arcana Rift</a>
+        </div>
+    </body>
+</html>
