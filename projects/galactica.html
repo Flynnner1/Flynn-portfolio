@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galactica — Flynn Martin</title>
+    <meta name="description" content="A Space Invaders style game in Unity, played with a controller we wired up ourselves from an Arduino, a lever, a button, a speaker and a vibration motor." />
+    <meta name="theme-color" content="#0a0c0b" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav" aria-label="Main">
+    <div class="shell nav-inner">
+        <a class="nav-mark" href="../index.html">Flynn Martin</a>
+        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
+    </div>
+</nav>
+
+<main id="main" class="page">
+    <header class="page-header">
+        <p class="eyebrow">Unity &middot; Arduino &middot; Duo project</p>
+        <h1>Galactica</h1>
+        <p class="lede">A Space Invaders style game you play with a controller we wired up ourselves.</p>
+    </header>
+
+    <img class="shot shot--wide" src="../img/galactica.png" width="800" height="500"
+         alt="Galactica: rows of red, green and blue pixel-art invaders above the player ship" />
+    <p class="note">The sprites above are the real game art, drawn by hand for this project.</p>
+
+    <section class="section">
+        <h2>Overview</h2>
+        <p>
+            For the physical computing project we had to build something you control with real hardware
+            instead of a keyboard. We made a wave-based shooter and a controller to go with it:
+            a lever to steer, a button to shoot, a small speaker for sound and a vibration motor
+            that buzzes when you get hit.
+        </p>
+        <p>
+            The game is two programs talking to each other. The Arduino reads the hardware and sends
+            words like <code>LEFT</code> over the serial port; Unity listens and turns those into
+            movement and shots.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Features</h2>
+        <ul class="list">
+            <li>Move left and right, and shoot projectiles that damage enemies</li>
+            <li>Different enemy types — some only fly, others shoot back</li>
+            <li>A wave system that keeps sending new rows of enemies</li>
+            <li>Health: you lose a heart when an enemy hits you or crosses the bottom line</li>
+            <li>Win by clearing the last wave, lose when your health runs out</li>
+            <li>Sound and vibration on a kill and on damage</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>The controller</h2>
+        <ul class="list">
+            <li>A lever for steering and a button to fire</li>
+            <li>A second button to go back out of the game</li>
+            <li>A piezo speaker for the sound effects</li>
+            <li>A vibration motor for feedback when you take damage</li>
+        </ul>
+        <p>
+            The Arduino sketch reads all of those pins and writes simple lines to the serial port.
+            Keeping the messages that plain made it easy to test the game without the controller,
+            and easy to test the controller without the game.
+        </p>
+
+        <h3 class="subhead">Getting the two halves to talk</h3>
+        <p>
+            Before any of it looked like a controller, it had to work at all. These two clips are from
+            that stage: the wiring on the breadboard, and the same input moving an object in Unity.
+        </p>
+        <div class="clips">
+            <figure>
+                <video controls preload="none" poster="../media/galactica-hardware-poster.jpg" playsinline>
+                    <source src="../media/galactica-hardware.mp4" type="video/mp4" />
+                    Your browser cannot play this video.
+                </video>
+                <figcaption>The Arduino wired up on the breadboard, with the input lighting an LED.</figcaption>
+            </figure>
+            <figure>
+                <video controls preload="none" poster="../media/galactica-unity-poster.jpg" playsinline>
+                    <source src="../media/galactica-unity.mp4" type="video/mp4" />
+                    Your browser cannot play this video.
+                </video>
+                <figcaption>And in Unity: the object moving left and right on that same input.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>What I learned</h2>
+        <ul class="list">
+            <li>Getting two separate systems to talk to each other over a serial connection</li>
+            <li>That hardware input is messy — a lever does not send clean events like a key does</li>
+            <li>Building a wave system that stays fair as it gets harder</li>
+            <li>Designing a game around the controller you have, instead of the other way around</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Read the code</h2>
+        <ul class="list">
+            <li><a href="https://github.com/Sint-Lucas/sd2-p8-physical-challenge-flynn-teun" target="_blank" rel="noopener noreferrer">View the source on GitHub</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <div class="shell footer-inner">
+        <span>&copy; 2026 Flynn Martin</span>
+        <a href="../index.html">Back to portfolio</a>
+    </div>
+</footer>
+</body>
+</html>

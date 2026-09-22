@@ -1,451 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Flynn's Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flynn Martin — Game Developer</title>
 
-            body {
-                font-family: 'Segoe UI', Arial, sans-serif;
-                background: #101313;
-                color: #f1f7ed;
-                line-height: 1.6;
-            }
+    <meta name="description" content="Flynn Martin is a game developer and student at Sint-Lucas, building games in Unity and C# with hand-made pixel art. See Arcana Rift, Lucidus and more." />
+    <meta name="theme-color" content="#0a0c0b" />
+    <link rel="canonical" href="https://flynnner1.github.io/Flynn-portfolio/" />
 
-            header {
-                background: #111a13;
-                color: #a6ff4d;
-                padding: 2rem 0;
-                text-align: center;
-                box-shadow: 0 2px 10px rgba(60,255,100,0.08);
-            }
-            .header-flex {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 1.5rem;
-            }
-            .profile-img {
-                width: 140px;
-                height: 140px;
-                object-fit: cover;
-                border-radius: 50%;
-                border: 3px solid #62ff7e;
-                box-shadow: 0 2px 10px #62ff7e44;
-                background: #222;
-            }
-            header h1 {
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                letter-spacing: 2px;
-                color: #62ff7e;
-                text-shadow: 2px 2px 10px #145c1b55;
-            }
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Flynn Martin — Game Developer" />
+    <meta property="og:description" content="Game developer and student at Sint-Lucas. Unity, C#, and hand-made pixel art." />
+    <meta property="og:url" content="https://flynnner1.github.io/Flynn-portfolio/" />
+    <meta property="og:image" content="https://flynnner1.github.io/Flynn-portfolio/img/arcana-rift.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-            header p {
-                font-size: 1.2rem;
-                color: #b3f7b3;
-            }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-            nav {
-                background: #181d19;
-                padding: 1rem 0;
-                box-shadow: 0 2px 8px rgba(60,255,100,0.04);
-            }
-
-            nav ul {
-                list-style: none;
-                display: flex;
-                justify-content: center;
-                gap: 2rem;
-            }
-
-            nav a {
-                color: #a6ff4d;
-                text-decoration: none;
-                font-weight: bold;
-                transition: color 0.2s, background 0.2s;
-                padding: 0.5rem 1rem;
-                border-radius: 12px;
-            }
-
-            nav a:hover {
-                background: #a6ff4d;
-                color: #181d19;
-            }
-
-            main {
-                max-width: 900px;
-                margin: 2rem auto;
-                padding: 0 1rem;
-            }
-
-            section {
-                margin-bottom: 2.5rem;
-                background: #161a17;
-                border-radius: 8px;
-                box-shadow: 0 2px 10px rgba(46, 255, 121, 0.07);
-                padding: 2rem;
-                border: 1px solid #2e4d34;
-            }
-
-            h2 {
-                color: #62ff7e;
-                margin-bottom: 1rem;
-                font-size: 1.5rem;
-                border-bottom: 2px solid #333d2c;
-                padding-bottom: .5rem;
-            }
-
-            .projects-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-                gap: 1.5rem;
-            }
-
-            .project-card {
-                background: #182618;
-                border: 1px solid #62ff7e55;
-                border-radius: 6px;
-                padding: 1.2rem;
-                transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .project-card:hover {
-                box-shadow: 0 2px 16px 0 #62ff7e44;
-                border-color: #a6ff4d;
-                background: #222b21;
-            }
-
-            .project-image-container {
-                width: 100%;
-                height: 180px;
-                border-radius: 4px;
-                margin-bottom: 1rem;
-                background-color: #222b21;
-                overflow: hidden;
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .project-image {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            .project-image.rotated {
-                transform: rotate(90deg) scale(1);
-                object-fit: contain;
-            }
-
-            .project-image-gin {
-                object-fit: contain;
-                background: #101313;
-            }
-
-            .project-card h3 {
-                margin-bottom: 0.4rem;
-                font-size: 1.15rem;
-                color: #a6ff4d;
-            }
-
-            .project-card p {
-                font-size: .96rem;
-                color: #c2ffbc;
-                margin-bottom: 0.2rem;
-                flex-grow: 1;
-            }
-
-            .project-card a {
-                display: inline-block;
-                margin-top: 0.8rem;
-                color: #62ff7e;
-                background: #181d19;
-                border-radius: 8px;
-                padding: 0.25rem 0.7rem;
-                text-decoration: none;
-                font-weight: 500;
-                font-size: .95rem;
-                border: 1px solid #62ff7e66;
-                transition: background 0.2s, color 0.2s;
-            }
-
-            .project-card a:hover {
-                background: #62ff7e;
-                color: #101313;
-                border-color: #a6ff4d;
-            }
-
-            .skills-list {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.8rem;
-            }
-
-            .skills-list span {
-                background: #2e4d34;
-                color: #a6ff4d;
-                padding: 0.5rem 1rem;
-                border-radius: 20px;
-                font-size: .98rem;
-                font-weight: 500;
-                box-shadow: 0 2px 6px #62ff7e22;
-                letter-spacing: 1px;
-            }
-
-            .contact-card {
-                background: #182618;
-                border-radius: 10px;
-                padding: 1.5rem 2rem 1.5rem 2rem;
-                box-shadow: 0 2px 10px #62ff7e22;
-                border: 1px solid #62ff7e55;
-                max-width: 500px;
-                margin: 0 auto 2rem auto;
-            }
-            .contact-card p {
-                color: #b3f7b3;
-                margin-bottom: 1.2rem;
-                font-size: 1.11rem;
-            }
-            .contact-card a,
-            .contact-card span {
-                color: #a6ff4d;
-                font-weight: 500;
-            }
-
-            .contact-form {
-                max-width: 500px;
-                margin: 0 auto;
-                background: #182618;
-                border-radius: 10px;
-                padding: 2rem;
-                box-shadow: 0 2px 10px #62ff7e22;
-                border: 1px solid #62ff7e55;
-            }
-            .contact-form label {
-                display: block;
-                margin-bottom: 0.5rem;
-                font-weight: 500;
-                color: #a6ff4d;
-            }
-            .contact-form input,
-            .contact-form textarea {
-                width: 100%;
-                padding: 0.5rem;
-                margin-bottom: 1.3rem;
-                background: #222b21;
-                color: #f1f7ed;
-                border: 1px solid #62ff7e44;
-                border-radius: 6px;
-                font-size: 1rem;
-            }
-            .contact-form textarea {
-                min-height: 80px;
-                resize: vertical;
-            }
-            .contact-form button {
-                background: #62ff7e;
-                color: #101313;
-                border: none;
-                border-radius: 8px;
-                padding: 0.7rem 1.5rem;
-                font-size: 1.1rem;
-                font-weight: bold;
-                cursor: pointer;
-                transition: background 0.2s;
-            }
-            .contact-form button:hover {
-                background: #a6ff4d;
-            }
-            .contact-success {
-                color: #62ff7e;
-                background: #222b21;
-                padding: 1rem;
-                border-radius: 8px;
-                margin-top: 1rem;
-                text-align: center;
-                border: 1px solid #62ff7e55;
-                font-weight: bold;
-            }
-
-            footer {
-                text-align: center;
-                padding: 1.5rem 0;
-                background: #111a13;
-                color: #b3f7b3;
-                margin-top: 2rem;
-                font-size: 1rem;
-                border-top: 2px solid #2e4d34;
-            }
-
-            @media (max-width: 600px) {
-                main {
-                    padding: 0 .3rem;
-                }
-                section {
-                    padding: 1rem;
-                }
-                header h1 {
-                    font-size: 1.6rem;
-                }
-                nav ul {
-                    gap: 1rem;
-                }
-                .header-flex {
-                    flex-direction: column;
-                    gap: 1rem;
-                }
-                .profile-img {
-                    width: 100px;
-                    height: 100px;
-                }
-                .contact-card,
-                .contact-form {
-                    padding: 1rem;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <div class="header-flex">
-                <!-- If your image filename contains spaces consider renaming it to own-face.jpg.
-                     For now spaces are encoded in the src attribute below. -->
-                <img src="own%20face.jpg" alt="Flynn's Face" class="profile-img" />
-                <div>
-                    <h1>Flynn's Portfolio</h1>
-                    <p>Game Developer & Student at Sint-Lucas | Building creative digital experiences</p>
-                </div>
-            </div>
-        </header>
-        <nav>
+    <nav class="nav" aria-label="Main">
+        <div class="shell nav-inner">
+            <a class="nav-mark" href="#top">Flynn Martin</a>
             <ul>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>
-                    Hi! I'm Flynn Martin, an aspiring Game developer currently studying at Sint-Lucas. I enjoy creating technical games and experimenting with new technologies. My main focus is on making Video Games.
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
+        <div class="shell hero-inner">
+            <img class="avatar" src="img/flynn.jpg" width="480" height="569"
+                 alt="Portrait of Flynn Martin" fetchpriority="high" decoding="async" />
+            <div>
+                <p class="eyebrow">Available for collaboration</p>
+                <h1>Game developer<br /><span class="accent">building worlds in Unity.</span></h1>
+                <p class="hero-role">
+                    Student at Sint-Lucas making technical games in C# — from combat systems
+                    and inventories to every sprite, drawn by hand.
                 </p>
-            </section>
-            <section id="projects">
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">View projects</a>
+                    <a class="btn btn-ghost" href="https://github.com/Flynnner1" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="home-section shell" id="about">
+            <div class="section-head"><h2>About me</h2></div>
+            <p class="prose">
+                Hi, I'm <strong>Flynn Martin</strong>, an aspiring game developer studying at Sint-Lucas.
+                I like building the systems players never see but always feel — spawn logic, levelling curves,
+                inventories that stay out of the way. My main focus is <strong>making video games</strong>,
+                and I'm happiest when a mechanic finally clicks into place.
+            </p>
+        </section>
+
+        <section class="home-section shell" id="projects">
+            <div class="section-head">
                 <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="battle%20scene.png" alt="Arcana Rift Game Preview" class="project-image rotated" />
-                        </div>
+                <p>Nine projects, from my first Pong clone to a published game, a Minecraft mod and a game you play with an Arduino.</p>
+            </div>
+            <div class="projects">
+
+                <article class="card">
+                    <div class="card-media">
+                        <img src="img/arcana-rift.png" width="532" height="528" loading="lazy" decoding="async"
+                             alt="Battle scene from Arcana Rift showing hand-drawn pixel art enemies" />
+                    </div>
+                    <div class="card-body">
+                        <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Published</span></div>
                         <h3>Arcana Rift</h3>
-                        <p>A showcase of a finished and published game I made, built with Unity and C#. All pixel art was made by hand.</p>
-                        <a href="ambitie-p3.html">See Project</a>
+                        <p>A finished and published game built in Unity and C#. Every piece of pixel art was made by hand.</p>
+                        <a class="card-link" href="projects/arcana-rift.html">See project</a>
                     </div>
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="Lucidus%20pic.png" alt="Portfolio Project Preview" class="project-image" />
-                        </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-media">
+                        <img src="img/galactica.png" width="800" height="500" loading="lazy" decoding="async"
+                             alt="Rows of pixel-art invaders above the player ship in Galactica" />
+                    </div>
+                    <div class="card-body">
+                        <div class="tags"><span class="tag">Unity</span><span class="tag">Arduino</span><span class="tag">C#</span></div>
+                        <h3>Galactica</h3>
+                        <p>A wave shooter you play with a controller we wired up ourselves, with a lever, a button and a vibration motor.</p>
+                        <a class="card-link" href="projects/galactica.html">See project</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-media">
+                        <img src="img/warehouse-panic.png" width="800" height="500" loading="lazy" decoding="async"
+                             alt="Three order cards with coloured eggs from Warehouse Panic" />
+                    </div>
+                    <div class="card-body">
+                        <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Team</span></div>
+                        <h3>Warehouse Panic</h3>
+                        <p>Three players on one screen, each using their own phone as a controller, filling orders against the clock.</p>
+                        <a class="card-link" href="projects/warehouse-panic.html">See project</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-media">
+                        <img src="media/botanical-delight-poster.jpg" width="1280" height="659" loading="lazy" decoding="async"
+                             alt="A field of tomato plants added by the Botanical Delight Minecraft mod" />
+                    </div>
+                    <div class="card-body">
+                        <div class="tags"><span class="tag">Java</span><span class="tag">Minecraft</span><span class="tag">Team</span></div>
+                        <h3>Botanical Delight</h3>
+                        <p>A Minecraft mod that adds a tomato crop and a watering can, with its own blocks, recipes and loot tables.</p>
+                        <a class="card-link" href="projects/botanical-delight.html">See project</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-media">
+                        <img src="media/mech-dance-poster.jpg" width="1280" height="682" loading="lazy" decoding="async"
+                             alt="The four-legged mech standing on the spiral arena with its cannon raised" />
+                    </div>
+                    <div class="card-body">
+                        <div class="tags"><span class="tag">Unreal</span><span class="tag">First-person</span></div>
+                        <h3>Mech Target Shooter</h3>
+                        <p>A first-person target shooter where every accurate hit pushes a mech animation one step further.</p>
+                        <a class="card-link" href="projects/mech-target-shooter.html">See project</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-media">
+                        <img src="img/natlab-quiz.jpg" width="1400" height="718" loading="lazy" decoding="async"
+                             alt="The film-reel mascot beside a retro television showing a quiz question about Philips" />
+                    </div>
+                    <div class="card-body">
+                        <div class="tags"><span class="tag">Unity</span><span class="tag">Needle Engine</span><span class="tag">C#</span></div>
+                        <h3>NatLab AR Tour</h3>
+                        <p>An AR tour of the building where Philips invented the CD, built in Unity and exported to the browser with Needle Engine.</p>
+                        <a class="card-link" href="projects/natlab.html">See project</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-media">
+                        <img src="img/lucidus.png" width="671" height="434" loading="lazy" decoding="async"
+                             alt="Screenshot from Lucidus, a team-built Unity game" />
+                    </div>
+                    <div class="card-body">
+                        <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Team</span></div>
                         <h3>Lucidus</h3>
-                        <p>A showcase of a game I made with a group, It's built with Unity and C#. All pixel art was made by A teammate in Krita.</p>
-                        <a href="Lucidus_Page.html">See Project</a>
+                        <p>A group project in Unity and C#. The pixel art was made by a teammate in Krita.</p>
+                        <a class="card-link" href="projects/lucidus.html">See project</a>
                     </div>
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="photo%20of%20secret%20level%20pong.png" alt="Pong Game Preview" class="project-image" />
-                        </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-media">
+                        <img src="img/pong.png" width="760" height="426" loading="lazy" decoding="async"
+                             alt="Secret level in my Pong game" />
+                    </div>
+                    <div class="card-body">
+                        <div class="tags"><span class="tag">Game logic</span><span class="tag">First project</span></div>
                         <h3>The Pong Game</h3>
-                        <p>My first game project, created to learn programming fundamentals and core game logic.</p>
-                        <a href="The%20pong%20game.html">See Project</a>
+                        <p>My first game project, made to learn programming fundamentals and core game logic.</p>
+                        <a class="card-link" href="projects/pong.html">See project</a>
                     </div>
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="Gin.png" alt="Fundamentals Practice Preview" class="project-image project-image-gin" />
-                        </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-media">
+                        <img src="img/pic-of-homepage-fake-news.png" width="760" height="351" loading="lazy" decoding="async"
+                             alt="Homepage of the fake gaming news site, with a made-up Minecraft 2 article" />
+                    </div>
+                    <div class="card-body">
+                        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
                         <h3>Fake News</h3>
-                        <p>One of the projects where I learned to code with HTML and CSS.</p>
-                        <a href="The%20Fake%20news%20page.html">See Project</a>
+                        <p>One of the projects where I learned to build for the web with HTML and CSS.</p>
+                        <a class="card-link" href="projects/fake-news.html">See project</a>
                     </div>
+                </article>
+
+            </div>
+
+            <p class="more-link"><a href="more-work.html">Also made: practice work and unfinished things &rarr;</a></p>
+        </section>
+
+        <section class="home-section shell" id="skills">
+            <div class="section-head"><h2>Skills</h2></div>
+            <div class="skill-groups">
+                <div class="skill-group">
+                    <h3>Game development</h3>
+                    <ul><li>Unity</li><li>C#</li><li>Unreal</li><li>Pixel art</li></ul>
                 </div>
-            </section>
-            <section id="skills">
-                <h2>Skills</h2>
-                <div class="skills-list">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Git & GitHub</span>
-                    <span>Teamwork</span>
-                    <span>Problem Solving</span>
-                    <span>Unity</span>
-                    <span>C#</span>
+                <div class="skill-group">
+                    <h3>Web</h3>
+                    <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
                 </div>
-            </section>
-            <section id="contact">
+                <div class="skill-group">
+                    <h3>Ways of working</h3>
+                    <ul><li>Git &amp; GitHub</li><li>Teamwork</li><li>Problem solving</li></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-section shell" id="contact">
+            <div class="section-head">
                 <h2>Contact</h2>
-                <div class="contact-card">
-                    <p>
-                        Want to get in touch or collaborate?<br />
-                        <span>GitHub:</span> <a href="https://github.com/Flynnner1" target="_blank" rel="noopener noreferrer">@Flynnner1</a>
-                    </p>
+                <p>Want to get in touch or collaborate? Pick whichever is easiest.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="panel">
+                    <h3>Find me</h3>
+                    <p>I read everything that lands in my inbox and usually reply within a few days.</p>
+                    <ul class="link-list">
+                        <li>
+                            <a href="https://github.com/Flynnner1" target="_blank" rel="noopener noreferrer">
+                                <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38l-.01-1.34c-2.23.48-2.7-1.07-2.7-1.07-.36-.93-.89-1.18-.89-1.18-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.23 1.88.88 2.34.67.07-.52.28-.88.5-1.08-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>
+                                @Flynnner1
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:2006flynnmartin@gmail.com">
+                                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="2"/><path d="m2 4.5 6 4 6-4"/></svg>
+                                2006flynnmartin@gmail.com
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Name" />
 
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required placeholder="Email" />
-
-                    <label for="phone">Your Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="Phone Number" />
-
-                    <label for="question">Your Question</label>
-                    <textarea id="question" name="question" required placeholder="Type your question or message"></textarea>
-
-                    <button type="submit">Send Message</button>
+                <form class="panel" id="contactForm" novalidate>
+                    <h3>Send a message</h3>
+                    <div class="field">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Doe" />
+                    </div>
+                    <div class="field">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@example.com" />
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone <span class="optional">(optional)</span></label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+31 6 ..." />
+                    </div>
+                    <div class="field">
+                        <label for="question">Your message</label>
+                        <textarea id="question" name="question" required placeholder="What would you like to talk about?"></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Open in email app</button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
                 </form>
-                <div id="contactSuccess" class="contact-success" style="display:none;">
-                    Thank you! Your message has been sent.
-                </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <script>
-                document.getElementById('contactForm').addEventListener('submit', function(e) {
-                    e.preventDefault();
+    <footer>
+        <div class="shell footer-inner">
+            <span>&copy; <span id="year">2026</span> Flynn Martin</span>
+            <span>Built by hand with HTML, CSS &amp; JavaScript</span>
+        </div>
+    </footer>
 
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const phone = document.getElementById('phone').value;
-                    const question = document.getElementById('question').value;
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-                    const recipient = "2006flynnmartin@gmail.com";
-                    const subject = encodeURIComponent("Portfolio Contact from " + name);
-                    const body = encodeURIComponent(
-                        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nQuestion: ${question}`
-                    );
+        // highlight the section you're currently reading
+        (function () {
+            const links = new Map();
+            document.querySelectorAll('.nav ul a[href^="#"]').forEach(a => links.set(a.getAttribute('href').slice(1), a));
+            const sections = [...links.keys()].map(id => document.getElementById(id)).filter(Boolean);
+            if (!('IntersectionObserver' in window) || !sections.length) return;
 
-                    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-
-                    document.getElementById('contactSuccess').style.display = 'block';
-                    document.getElementById('contactForm').reset();
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    links.forEach(a => a.removeAttribute('aria-current'));
+                    links.get(entry.target.id)?.setAttribute('aria-current', 'true');
                 });
-            </script>
-        </main>
-        <footer>
-            &copy; 2025 Flynn. Made with HTML & CSS.
-        </footer>
-    </body>
+            }, { rootMargin: '-45% 0px -50% 0px' });
+
+            sections.forEach(s => observer.observe(s));
+        })();
+
+        // contact form -> mailto, with an honest status message
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const status = document.getElementById('formStatus');
+
+            if (!this.checkValidity()) {
+                status.textContent = 'Please fill in your name, a valid email, and a message.';
+                this.reportValidity();
+                return;
+            }
+
+            const val = id => document.getElementById(id).value.trim();
+            const recipient = '2006flynnmartin@gmail.com';
+            const subject = encodeURIComponent('Portfolio contact from ' + val('name'));
+            const lines = ['Name: ' + val('name'), 'Email: ' + val('email')];
+            if (val('phone')) lines.push('Phone: ' + val('phone'));
+            lines.push('', val('question'));
+            const body = encodeURIComponent(lines.join('\n'));
+
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+            // the browser cannot confirm the mail was actually sent — so don't claim it was
+            status.textContent = 'Opening your email app… If nothing happens, mail me directly at ' + recipient + '.';
+        });
+    </script>
+</body>
 </html>
