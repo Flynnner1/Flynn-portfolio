@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NatLab AR Tour — Flynn Martin</title>
+    <meta name="description" content="An AR tour of the building where Philips invented the CD, built in Unity and exported to the browser with Needle Engine." />
+    <meta name="theme-color" content="#0a0c0b" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav" aria-label="Main">
+    <div class="shell nav-inner">
+        <a class="nav-mark" href="../index.html">Flynn Martin</a>
+        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
+    </div>
+</nav>
+
+<main id="main" class="page">
+    <header class="page-header">
+        <p class="eyebrow">Unity &middot; Needle Engine &middot; Studio project</p>
+        <h1>NatLab AR Tour</h1>
+        <p class="lede">An AR tour of the building where Philips invented the CD. I built the AR side.</p>
+    </header>
+
+    <img class="shot shot--wide" src="../img/natlab-quiz.jpg" width="1400" height="718"
+         alt="The film-reel mascot next to a retro television showing the first quiz question, with a cassette tape on the wall" />
+    <p class="note">The guide — a film reel with an N cap — asks the questions on an old television set.</p>
+
+    <section class="section">
+        <h2>Overview</h2>
+        <p>
+            The school building used to be the Philips NatLab, where a lot of well-known inventions were
+            made — the CD among them. The NatLab cinema, which sits in the same building, wanted more
+            young people to know that. The team was game developers, web developers and content
+            producers together, and I was on the game side.
+        </p>
+        <p>
+            My part was the AR tour. The rooms are built as a normal Unity scene, and
+            <strong>Needle Engine</strong> exports that scene to the web, so it runs in the phone's own
+            browser instead of in an app you have to install first. That mattered here: visitors are
+            standing in the building already, and nobody downloads an app to look at a wall.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>What I built</h2>
+        <ul class="list">
+            <li><strong>The AR rooms</strong> — the walls, the lighting, the materials and the objects that carry the story: a Philips CD-RW, a cassette, a film projector, an old radio, a piano behind theatre curtains.</li>
+            <li><strong>The guide</strong> — a film-reel character with an N cap who stands next to a period television and asks the questions.</li>
+            <li><strong>The animation</strong> — a Timeline that plays through the scene, with its own animation clip and director.</li>
+            <li><strong>A trigger from outside the scene</strong> — <code>ColorChangeDetector</code> watches a material's colour and starts the Timeline the moment it changes, so something happening elsewhere in the app can set the animation off.</li>
+            <li><strong>A play hook</strong> — <code>ReactScript</code>, one public method the rest of the app can call to start the animation. (The name is about reacting to an event; it has nothing to do with React.)</li>
+            <li><strong>Click interaction</strong> — <code>Clickingscript</code>, which hides an object once you have dealt with it.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Technologies I used</h2>
+        <ul class="list">
+            <li>Unity</li>
+            <li>Needle Engine, to export the scene to the browser over WebXR</li>
+            <li>C# for the interaction and trigger scripts</li>
+            <li>Unity Timeline and the animation system</li>
+        </ul>
+        <p class="note">
+            The surrounding web app — the timeline of the building's history, the quiz pages and the
+            studio section — was built by the web developers on the team in React. I did not work on that part.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>A look around the rooms</h2>
+        <div class="gallery">
+            <figure>
+                <img src="../img/natlab-projector.jpg" width="1100" height="691" loading="lazy" decoding="async"
+                     alt="The mascot beside a television showing a question about what the abbreviation Natlab stands for, next to an old film projector" />
+                <figcaption>Each room holds one question and the objects that go with it.</figcaption>
+            </figure>
+            <figure>
+                <img src="../img/natlab-cd.jpg" width="1066" height="623" loading="lazy" decoding="async"
+                     alt="A large Philips CD-RW disc on a stand beside a vintage radio" />
+                <figcaption>The CD, invented in this building, stood up as an exhibit of its own.</figcaption>
+            </figure>
+            <figure>
+                <img src="../img/natlab-piano.jpg" width="1066" height="667" loading="lazy" decoding="async"
+                     alt="A grand piano in front of red theatre curtains, with music notes on the wall" />
+                <figcaption>The cinema side of the building, behind the curtains.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>What I learned</h2>
+        <ul class="list">
+            <li>Getting a Unity scene to run in a browser, which is not the same as getting it to run in the editor</li>
+            <li>Starting an animation from something outside the scene, instead of from a button inside it</li>
+            <li>Dressing a room with models, materials and light so it reads as a place with a history</li>
+            <li>Building for a real client with their own wishes, not a made-up assignment</li>
+            <li>Working in a team with web developers and content producers, where my part had to fit theirs</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Read the code</h2>
+        <ul class="list">
+            <li><a href="https://github.com/Sint-Lucas/sd2-p8-studio-maid-casul-natlab-team3-k-l-e-f-d-t" target="_blank" rel="noopener noreferrer">View the source on GitHub</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <div class="shell footer-inner">
+        <span>&copy; 2026 Flynn Martin</span>
+        <a href="../index.html">Back to portfolio</a>
+    </div>
+</footer>
+</body>
+</html>

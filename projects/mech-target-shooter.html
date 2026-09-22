@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mech Target Shooter — Flynn Martin</title>
+    <meta name="description" content="A first-person target shooter where every accurate hit advances a mech animation, built in Unity with C#." />
+    <meta name="theme-color" content="#0a0c0b" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav" aria-label="Main">
+    <div class="shell nav-inner">
+        <a class="nav-mark" href="../index.html">Flynn Martin</a>
+        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
+    </div>
+</nav>
+
+<main id="main" class="page">
+    <header class="page-header">
+        <p class="eyebrow">Unreal &middot; Blueprints &middot; First-person</p>
+        <h1>Mech Target Shooter</h1>
+        <p class="lede">A first-person shooter mini-game where every hit powers up a mech animation.</p>
+    </header>
+
+    <div class="embed">
+        <video controls preload="none" poster="../media/mech-dance-poster.jpg" playsinline>
+            <source src="../media/mech-dance.mp4" type="video/mp4" />
+            Your browser cannot play this video.
+        </video>
+    </div>
+    <p class="note">The reward: hit enough targets and the mech runs its full animation on the arena floor.</p>
+
+    <section class="section">
+        <h2>Overview</h2>
+        <p>
+            The goal is to shoot targets as accurately as possible. Every hit advances a mech animation
+            one step further, which turns the score into something you can see instead of just read —
+            and makes each shot feel like it landed. Hit enough targets and you win.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Features</h2>
+        <ul class="list">
+            <li>Standard first-person controls, including jumping</li>
+            <li>Projectiles that follow physics instead of hitting instantly</li>
+            <li>Targets that break when you hit them, and a score that goes up</li>
+            <li>A mech animation that advances one step with every successful hit</li>
+            <li>A win once every target is destroyed, with a UI to restart</li>
+            <li>Playable with keyboard and mouse or with a controller</li>
+        </ul>
+
+        <div class="embed embed--after-list">
+            <video controls preload="none" poster="../media/mech-target-shooter-poster.jpg" playsinline>
+                <source src="../media/mech-target-shooter.mp4" type="video/mp4" />
+                Your browser cannot play this video.
+            </video>
+        </div>
+        <p class="note">And the part before that: working through the targets on the island.</p>
+    </section>
+
+    <section class="section">
+        <h2>Technologies used</h2>
+        <ul class="list">
+            <li>Unreal Engine 5</li>
+            <li>Blueprints for the gameplay logic</li>
+            <li>Unreal's animation system for the mech sequence</li>
+            <li>Materials and models, so the level does not look like an empty demo</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>What I learned</h2>
+        <ul class="list">
+            <li>Finding my way around a second engine after working mostly in Unity</li>
+            <li>Building gameplay in Blueprints instead of in written code</li>
+            <li>Making hit detection reliable rather than approximately right</li>
+            <li>Triggering animations from gameplay events</li>
+            <li>Designing a clear loop with a win condition that feels earned</li>
+        </ul>
+    </section>
+    <section class="section">
+        <h2>Read the code</h2>
+        <ul class="list">
+            <li><a href="https://github.com/Sint-Lucas/sd2-p6-specialisation-game-unreal-2526-Flynnner1" target="_blank" rel="noopener noreferrer">View the source on GitHub</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <div class="shell footer-inner">
+        <span>&copy; 2026 Flynn Martin</span>
+        <a href="../index.html">Back to portfolio</a>
+    </div>
+</footer>
+</body>
+</html>
